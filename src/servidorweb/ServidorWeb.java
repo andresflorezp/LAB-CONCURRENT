@@ -11,7 +11,7 @@ import java.util.Date;
 public class ServidorWeb {
 
     //El puerto por defecto para un servidor web es el 80
-    private static final int puertoDefecto = 80;
+    private static final int puertoDefecto = 4567;
 
     public static void main(String[] args) {//puerto - ruta de los archivos
 
@@ -20,7 +20,7 @@ public class ServidorWeb {
         //Puerto de escucha   
         int puertoservidor = puertoDefecto;
         //Leerá de la carpeta public_html en el home por defecto del usuario. /home/usuario/... o c:/documents and settings/usuario/...
-        String ruta = System.getProperty("user.home") + "/public_html/";
+        String ruta = System.getProperty("user.dir") + "/public_html/";
         //Socket de escucha. Todas las peticiones llegarán aquí.
         ServerSocket enlace = null;
 
